@@ -1,0 +1,17 @@
+<h1>Minha Lista de Tarefas</h1>
+<ul>
+    {% for i in all_items %}
+    <li>{{i.content}}
+        <form action="/delete_todo_item/{{i.id}}/" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<form action="/add_todo_item/" method = "post">
+    {% csrf_token %}
+    <input type="text" name="content">
+    <input type="submit" value="Adicionar tarefa">
+</form>
