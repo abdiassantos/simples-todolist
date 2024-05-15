@@ -1,1 +1,1 @@
-gunicorn simple_todolist.wsgi
+gunicorn simple_todolist.wsgi -b "192.168.15.11"
