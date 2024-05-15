@@ -1,0 +1,1 @@
+gunicorn simple_todolist.wsgi
